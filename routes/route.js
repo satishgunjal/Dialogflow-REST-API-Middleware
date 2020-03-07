@@ -4,11 +4,8 @@ const express = require('express');
 const router = express.Router();
 
 // Require the controllers
-const controller = require('../controllers/controller');
+const test = require('../controllers/test');
 
-//router.post('/', controller.dialogflow_rest_api_request);
-router.get('/', controller.dialogflow_rest_api_request);
-//router.get('/', controller.get_request);
-
+router.get('/test/detectTextIntent', test.detectTextIntent);
 
 module.exports = router;

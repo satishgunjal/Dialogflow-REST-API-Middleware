@@ -7,8 +7,8 @@ const PORT = 9000;
 const app = express();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
-app.use('/GdfRestApi', route);
+app.use('/gdfRestApi', route);
 app.get('/', (req, res) => res.send('Google Dialogflow REST API middleware'))
 app.listen(PORT, () => {
-    console.log("################## listening on port " + PORT + " ################# **");
+    console.log("################## listening on port " + PORT + " #################");
 });
