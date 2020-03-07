@@ -1,0 +1,17 @@
+{
+  "name": "gdf_rest_api",
+  "version": "1.0.0",
+  "description": "Dialogflow REST API middleware application",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Satish Gunjal",
+  "license": "ISC",
+  "dependencies": {
+    "@google-cloud/storage": "^4.4.0",
+    "dialogflow": "^1.2.0",
+    "express": "^4.17.1",
+    "uuid": "^7.0.2"
+  }
+}
