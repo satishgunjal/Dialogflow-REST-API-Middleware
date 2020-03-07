@@ -10,5 +10,5 @@ app.use(bodyParser.urlencoded({extended: false}));
 app.use('/GdfRestApi', route);
 app.get('/', (req, res) => res.send('Google Dialogflow REST API middleware'))
 app.listen(PORT, () => {
-    console.log("################## listening on port " + PORT + " #################");
+    console.log("################## listening on port " + PORT + " ################# **");
 });
