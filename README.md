@@ -5,7 +5,8 @@ Instead of using Dialogflow's inbuilt integration, I am going to write my own mi
 - Last step is where we install the "Install the Dialogflow client library" using command "npm install dialogflow" for Node.js.
 - Before we can run any code to test the DIalogflow API we have to create an Agent on Dialogflow console and select the same project         that we have created following above link
 - Important to note that project has to be same, as we have JSON key which API's are going to rely for authentication.
-- Now lets test some code.
+
+## Now lets test some code.
 
 ### detectTextIntent1() 
 - In this method Dialogflow API will environment variable "GOOGLE_APPLICATION_CREDENTIALS" for authentication
@@ -71,7 +72,7 @@ Instead of using Dialogflow's inbuilt integration, I am going to write my own mi
   - In this method instead of using environment variable we are using required parameters(private_key, client_email) from JSON key
   - In 'detectTextIntent1' Dialogflow API will environment variable "GOOGLE_APPLICATION_CREDENTIALS" for authentication *
   - To test it, uncomment the line "detectTextIntent2" in "detectTextIntent" function run the program
-  - Test url is http://localhost:9000/gdfRestApi/test/detectTextIntent
+  - Test url is http://localhost:9000/gdfRestApi/test/detectTextIntent  
 
   ```
   function detectTextIntent2(projectId, sessionId, query, languageCode) {
