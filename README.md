@@ -6,18 +6,46 @@ Instead of using Dialogflow's inbuilt integration, I am going to write my own mi
 
 ### Create Dialogflow Agent & Cloud Porject
 - Go to Dialogflow console to create new Agent. Every dialoghflow agent must have Google Cloud Project.
-- Now if you are not going to use Dialogflow Rest APi then you can go ahead and create Dialogflow agent with deafult configuration. It will create basic cloud project or your agent.
-- But if you are going to use Dialogflow REST API then its recommonded to create Cloud Project using GCP console, enable required API and then create agent and use that project from dropdown.
+- Now 
+- But 
 
 ### How To Enable REST API Access For Existing Dialogflow Agent
 - Existing Dailogflow agent already have basic cloud project and service account.
+  <img src="images/Existing-Dialogflow-Agent.PNG" width="500">
 - Now [Enable the Dialogflow V2 API For This Project](https://console.cloud.google.com/flows/enableapi?apiid=dialogflow.googleapis.com&_ga=2.121536335.639284585.1585221980-1017238779.1535439467)
-- 
+- Now click on the service account link, it will take you service accounts page for this project.
+- Click on the hamburger icon and create key for above service account. Select JSON type.
 
-- Follow [this link](https://cloud.google.com/dialogflow/docs/quick/setup#authentication-and-access-control) to test authentication         using service account and text intect detection.
-- Last step is where we install the "Install the Dialogflow client library" using command "npm install dialogflow" for Node.js.
-- Before we can run any code to test the DIalogflow API we have to create an Agent on Dialogflow console and select the same project         that we have created following above link
-- Important to note that project has to be same, as we have JSON key which API's are going to rely for authentication.
+### How To Enable REST API Access For New Dialogflow Agent
+If you are going to use Dialogflow REST API then its recommonded to create Cloud Project using GCP console, enable required API and then create agent and use that project from dropdown.
+
+#### Create a project
+- In the Cloud Console, on the project selector page, select or create a Cloud project.
+- [Go to the project selector page](https://console.cloud.google.com/projectselector2/home/dashboard?_ga=2.125736141.639284585.1585221980-1017238779.1535439467)
+
+#### Enable billing
+- You can skip this step if you are only using the Dialogflow Standard Edition.
+
+#### Enable the API
+  - You must enable the Dialogflow API for your project. [Enable the Dialogflow V2 API](https://console.cloud.google.com/flows/enableapi?apiid=dialogflow.googleapis.com&_ga=2.24483069.639284585.1585221980-1017238779.1535439467)
+
+#### Set up authentication
+- Any client application that uses the API must be authenticated and granted access to the requested resources.
+- It is recommended that you use service accounts for authentication and access control. A service account provides credentials for applications, as opposed to end-users. Service accounts are owned by projects, and you can create many service accounts for a project. For more information, see [Service accounts](https://cloud.google.com/docs/authentication#service_accounts)
+- For the purpose of trying the Dialogflow API, you can use the Project > Owner role, which grants the service account full access to the project
+- Steps are as below..
+  1. In the Cloud Console, go to the [Create service account key page](https://console.cloud.google.com/apis/credentials/serviceaccountkey?_ga=2.25779322.639284585.1585221980-1017238779.1535439467)
+  2. From the Service account list, select New service account.
+  3. In the Service account name field, enter a name
+  4. From the Role list, select Project > Owner
+  5. Click Create. A JSON file that contains your key downloads to your computer
+  
+#### Use the service account key file in your environment
+- Provide authentication credentials to your application code by setting the environment variable GOOGLE_APPLICATION_CREDENTIALS
+- [Link for section](https://cloud.google.com/dialogflow/docs/quick/setup#auth-env)
+- Note: If setting environment variable doesent work you can refer section "detectTextIntent2()" to test it without environment variable
+
+
 
 ## Now lets test some code.
 
