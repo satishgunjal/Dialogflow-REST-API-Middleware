@@ -12,7 +12,7 @@ Instead of using Dialogflow's inbuilt integration, I am going to write my own mi
 ### How To Enable REST API Access For Existing Dialogflow Agent
 - Existing Dailogflow agent already have basic cloud project and service account.
   <img src="images/Existing-Dialogflow-Agent.PNG" width="500">
-- Now [Enable the Dialogflow V2 API For This Project](https://console.cloud.google.com/flows/enableapi?apiid=dialogflow.googleapis.com&_ga=2.121536335.639284585.1585221980-1017238779.1535439467)
+- Now to enable the Dialogflow V2 API for this project [Click Here](https://console.cloud.google.com/flows/enableapi?apiid=dialogflow.googleapis.com&_ga=2.121536335.639284585.1585221980-1017238779.1535439467)
 - Now click on the service account link, it will take you service accounts page for this project.
 - Click on the hamburger icon and create key for above service account. Select JSON type.
 
@@ -43,7 +43,24 @@ If you are going to use Dialogflow REST API then its recommonded to create Cloud
 #### Use the service account key file in your environment
 - Provide authentication credentials to your application code by setting the environment variable GOOGLE_APPLICATION_CREDENTIALS
 - [Link for section](https://cloud.google.com/dialogflow/docs/quick/setup#auth-env)
-- Note: If setting environment variable doesent work you can refer section "detectTextIntent2()" to test it without environment variable
+- Note: If setting environment variable doesent work, you can refer section "detectTextIntent2()" to test it without environment variable
+
+#### Install and initialize the Cloud SDK
+- Cloud SDK is a set of tools that you can use to manage resources and applications hosted on GCP. This includes the gcloud command line tool
+- [Install and initialize the Cloud SDK](https://cloud.google.com/sdk/docs)
+
+#### Test the SDK and authentication
+- If you have set up authentication in previous steps, you can use the gcloud tool to test your authentication environment. Execute the following command and verify that no error occurs and that credentials are returned:
+ ```
+ gcloud auth application-default print-access-token
+ ```
+- Note: If above command dont work for you then you wont be able to detectTextIntent1(). But detectTextIntent2() will work.
+ 
+ #### Install the latest Google Cloud Client Libraries
+- For Node.js use command "npm install dialogflow" 
+
+ #### Create Dialogflow Agent
+- For Node.js use command "npm install dialogflow" 
 
 
 
