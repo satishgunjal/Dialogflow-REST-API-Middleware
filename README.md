@@ -4,11 +4,6 @@ Instead of using Dialogflow's inbuilt integration, I am going to write my own mi
 ## Setup Dialogflow For REST API Integration
 [Reference Google Documentation](https://cloud.google.com/dialogflow/docs/quick/setup#authentication-and-access-control)
 
-### Create Dialogflow Agent & Cloud Porject
-- Go to Dialogflow console to create new Agent. Every dialoghflow agent must have Google Cloud Project.
-- Now 
-- But 
-
 ### How To Enable REST API Access For Existing Dialogflow Agent
 - Existing Dailogflow agent already have basic cloud project and service account.
   <img src="images/Existing-Dialogflow-Agent.PNG" width="500">
@@ -60,9 +55,8 @@ If you are going to use Dialogflow REST API then its recommonded to create Cloud
 - For Node.js use command "npm install dialogflow" 
 
  #### Create Dialogflow Agent
-- For Node.js use command "npm install dialogflow" 
-
-
+- Before we can run any code to test the Dialogflow API we have to create an Agent on Dialogflow console and select the same project that we have created following above steps
+- Important to note that project has to be same.
 
 ## Now lets test some code.
 
