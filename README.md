@@ -46,19 +46,22 @@ If you are going to use Dialogflow REST API then its recommonded to create Cloud
 
 #### Test the SDK and authentication
 - If you have set up authentication in previous steps, you can use the gcloud tool to test your authentication environment. Execute the following command and verify that no error occurs and that credentials are returned:
- ```
- gcloud auth application-default print-access-token
- ```
+   ```
+   gcloud auth application-default print-access-token
+   ```
 - Note: If above command dont work for you then you wont be able to detectTextIntent1(). But detectTextIntent2() will work.
  
  #### Install the latest Google Cloud Client Libraries
-- For Node.js use command "npm install dialogflow" 
+ - For Node.js use below command
+    ```
+    npm install dialogflow
+    ```
 
  #### Create Dialogflow Agent
 - Before we can run any code to test the Dialogflow API we have to create an Agent on Dialogflow console and select the same project that we have created following above steps
 - Important to note that project has to be same.
 
-## Now lets test some code.
+## Now Lets Test Some Code
 
 ### detectTextIntent1() 
 - In this method Dialogflow API will environment variable "GOOGLE_APPLICATION_CREDENTIALS" for authentication
